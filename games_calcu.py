@@ -10,7 +10,7 @@ def operasi(operasi_str):
         hasil = eval(f" {angka1} {operasi_str} {angka2}\n")
         print(hasil)
     except ValueError:
-        print("gabisa bro, input CUMA bisa angka aja ya!\n")
+        print("gabisa bro, input cuma bisa angka aja ya!\n")
 def tebakan():
     angka_acak = random.randint(1, 10)
     print("selamat datang di permainan tebakan angka!")
