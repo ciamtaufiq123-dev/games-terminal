@@ -11,7 +11,7 @@ def operasi(operasi_str):
         print(hasil)
     except ValueError:
         print("gabisa bro, input cuma bisa angka aja ya!\n")
-def tebakan():
+def main_tebakan():
     angka_acak = random.randint(1, 10)
     print("selamat datang di permainan tebakan angka!")
     tebakan_me = 0
@@ -28,16 +28,39 @@ def tebakan():
         else:
             print("wahh, selamat bro tebakan kamu benar, ada di angka", angka_acak)
             break
+def main_kalkulator():
+    while True:
+        print("==kalkulator_sederhana==")
+        print("1. Penjumlahan")
+        print("2. Pengurangan")
+        print("3. Perkalian")
+        print("4. Pembagian")
+        print("5. Keluar")
+        try:
+            pilihan = int(input("Masukkan pilihan Anda :\n"))
+        except ValueError:
+            print("gabisa bro, input harus angka ya!\n")
+            continue
+        if pilihan == 1:
+            operasi("+")
+        elif pilihan == 2:
+            operasi ("-")
+        elif pilihan == 3:
+            operasi("*")
+        elif pilihan == 4:
+            operasi("/")
+        elif pilihan == 5:
+            print("Terima kasih telah berkunjung ya!\n")
+            break
+        else:
+            print("Error, pilihan kamu gada bro!\n")
 def menu():
     while True:
-        print("===Games_Tebak_Angka===")
-        print("1. Mulai Tebakan\n")
-        print("===Kalkulator_Sederhana===")
-        print("2. Penjumlahan")
-        print("3. Pengurangan")
-        print("4. Perkalian")
-        print("5. Pembagian")
-        print("6. Keluar")
+        print("===Games_Terminal===")
+        print("1. Mulai Tebakan")
+        print("2. Kalkukator Sederhana")
+        print("3. Keluar")
+        
         try:
             pilihan = int(input("Masukka pilihan Anda :\n"))
         except ValueError:
@@ -45,17 +68,11 @@ def menu():
             print("gabisa bro, input cuma bisa angka saja ya!\n")
             continue
         if pilihan == 1:
-            tebakan()
+            main_tebakan()
         elif pilihan == 2:
-            operasi("+")
+            main_kalkulator()
         elif pilihan == 3:
-            operasi("-")
-        elif pilihan == 4:
-            operasi("*")
-        elif pilihan == 5:
-            operasi("/")
-        elif pilihan == 6:
-            print("Terima kasih telah berkunjung ya !\n")
+            print("Terima kasih telah berkunjung ya!\n")
             break
         else:
             print("Error, pilihan kamu gada bro!\n")
