@@ -1,4 +1,9 @@
-import random
+print("======================================")
+print("Selamat Datang Di Games Mini Terminal!")
+print("======================================")
+
+nama = input("Masukkan nama Anda :")
+print(f"Halo {nama}, selamat datang di games mini terminal, semoga kamu betah yaa!\n")
 
 def operasi(operasi_str):
     try:
@@ -12,6 +17,7 @@ def operasi(operasi_str):
     except ValueError:
         print("gabisa bro, input cuma bisa angka aja ya!\n")
 def main_tebakan():
+    import random
     angka_acak = random.randint(1, 10)
     print("selamat datang di permainan tebakan angka!")
     tebakan_me = 0
@@ -56,15 +62,14 @@ def main_kalkulator():
             print("Error, pilihan kamu gada bro!\n")
 def menu():
     while True:
-        print("===Games_Terminal===")
+        print("=====Menu=====")
         print("1. Mulai Tebakan")
         print("2. Kalkukator Sederhana")
         print("3. Keluar")
         
         try:
-            pilihan = int(input("Masukka pilihan Anda :\n"))
+            pilihan = int(input("Masukkan pilihan Anda :"))
         except ValueError:
-            
             print("gabisa bro, input cuma bisa angka saja ya!\n")
             continue
         if pilihan == 1:
